@@ -1,5 +1,4 @@
 /**
- * Log the text in red
  * @param {string} text
  * @returns {void}
  */
@@ -8,7 +7,6 @@ module.exports.logInRed = (text) => {
 }
 
 /**
- * Log the text in green
  * @param {string} text
  * @returns {void}
  */

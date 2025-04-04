@@ -13,8 +13,7 @@ const getOptions = () => {
 }
 
 /**
- * Get web driver
- * @returns {Promise<WebDriver>} Web driver
+ * @returns {Promise<WebDriver>}
  */
 module.exports.getWebDriver = async () => {
   const options = getOptions();

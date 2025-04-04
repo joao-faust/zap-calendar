@@ -9,10 +9,9 @@ module.exports = class Calendar {
   }
 
   /**
-   * Get events from Google Calendar based on start and end dates
    * @param {Date} startDate
    * @param {Date} endDate
-   * @return {Promise<calendar_v3.Schema$Event[] | undefined>} Events
+   * @return {Promise<calendar_v3.Schema$Event[] | undefined>}
    */
   async getEvents(startDate, endDate) {
     const res = await this._calendar.events.list({
@@ -26,8 +25,7 @@ module.exports = class Calendar {
   }
 
   /**
-   * Get today's event from Google Calendar
-   * @return {Promise<calendar_v3.Schema$Event[] | undefined>} Events
+   * @return {Promise<calendar_v3.Schema$Event[] | undefined>}
    */
   async getTodaysEvents() {
     const startDate = new Date();

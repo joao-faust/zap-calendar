@@ -12,22 +12,15 @@ module.exports = class WhatsApp {
     this._phone = phone;
   }
 
-  /**
-   * Initialize WhatsApp Web
-   */
   async start() {
     await this._webDriver.get(`https://web.whatsapp.com/send?phone=${this._phone}`);
   }
 
-  /**
-   * Stop WhatsAppp Web
-   */
   async stop() {
     await this._webDriver.quit();
   }
 
   /**
-   * Log in to WhatsApp
    * @param {string} qrCodeElBase64
    * @returns {Promise<boolean>}
    */
@@ -44,7 +37,6 @@ module.exports = class WhatsApp {
   }
 
   /**
-   * Send Google Calendar events to WhatsApp Contact
    * @param {calendar_v3.Schema$Event[] | undefined} events
    * @returns {Promise<void>}
    */

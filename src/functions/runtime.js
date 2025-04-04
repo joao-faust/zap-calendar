@@ -1,5 +1,4 @@
 /**
- * Check if runtime environment is on development
  * @returns {boolean}
  */
 module.exports.isDev = () => {

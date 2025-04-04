@@ -1,5 +1,4 @@
 /**
- * Wait some time before going to the next line
  * @param {string} milliseconds
  * @returns {Promise<void>}
  */

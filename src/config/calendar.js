@@ -8,8 +8,7 @@ const TOKEN_PATH = join(process.cwd(), "token.json");
 const CREDENTIALS_PATH = join(process.cwd(), "credentials.json");
 
 /**
- * Read previously authorized credentials from the save file
- * @returns {Promise<Common.OAuth2Client | null>} Google calendar client
+ * @returns {Promise<Common.OAuth2Client | null>}
  */
 const loadSavedCredentialsIfExist = async () => {
   try {
@@ -22,7 +21,6 @@ const loadSavedCredentialsIfExist = async () => {
 }
 
 /**
- * Serialize credentials to a file compatible with GoogleAuth.fromJSON
  * @param {Common.OAuth2Client} client
  * @returns {Promise<void>}
  */
@@ -40,9 +38,7 @@ const saveCredentials = async (client) => {
 }
 
 /**
- * Load or request or authorization to call APIs
- * @returns {Promise<Common.OAuth2Client | null>} Google calendar client or
- * null
+ * @returns {Promise<Common.OAuth2Client | null>}
  */
 module.exports.getCalendarAuth = async () => {
   let client = await loadSavedCredentialsIfExist();
