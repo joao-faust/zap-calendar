@@ -52,18 +52,19 @@ module.exports = class WhatsApp {
     const inputXpath = '//*[@id="main"]/footer/div[1]/div/span/div/div[2]/div[1]/div[2]/div[1]/p';
     const inputReference = until.elementLocated(By.xpath(inputXpath));
     const input = await this._webDriver.wait(inputReference, 10000);
-    if (!events) {
+    if (!events || events.length === 0) {
       await input.sendKeys("*No events scheduled for today*");
-      return;
     }
-    await input.sendKeys("*Today's events*" + Key.SHIFT + Key.ENTER);
-    events.forEach(async event => {
-      const title = event.summary;
-      const startHour = (new Date(event.start.dateTime)).getHours();
-      const endHour = (new Date(event.end.dateTime)).getHours();
-      const row = `${title}(${startHour}h-${endHour}h)`;
-      await input.sendKeys(row + Key.SHIFT + Key.ENTER);
-    });
+    else {
+      await input.sendKeys("*Today's events*" + Key.SHIFT + Key.ENTER);
+      events.forEach(async event => {
+        const title = event.summary;
+        const startHour = (new Date(event.start.dateTime)).getHours();
+        const endHour = (new Date(event.end.dateTime)).getHours();
+        const row = `${title}(${startHour}h-${endHour}h)`;
+        await input.sendKeys(row + Key.SHIFT + Key.ENTER);
+      });
+    }
     const refreshedInput = await this._webDriver.wait(inputReference, 10000);
     await refreshedInput.sendKeys(Key.ENTER);
   }
