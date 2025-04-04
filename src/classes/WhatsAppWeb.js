@@ -16,10 +16,6 @@ module.exports = class WhatsApp {
     await this._webDriver.get(`https://web.whatsapp.com/send?phone=${this._phone}`);
   }
 
-  async stop() {
-    await this._webDriver.quit();
-  }
-
   /**
    * @param {string} qrCodeElBase64
    * @returns {Promise<boolean>}

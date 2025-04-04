@@ -41,7 +41,7 @@ const { wait } = require("./functions/time");
 
     // Close web driver
     await wait(5000);
-    await whatsAppWeb.stop();
+    await webDriver.quit();
   }
   catch (error) {
     logInRed("Couldn't send the events to WhatsApp.");
