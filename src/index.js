@@ -24,8 +24,8 @@ const { wait } = require("./functions/time");
   await whatsAppWeb.start();
   try {
     console.log("Checking the session...");
-    const loginResult = await whatsAppWeb.logIn();
     await wait(10000);
+    const loginResult = await whatsAppWeb.logIn();
     if (loginResult) {
       console.log("Waiting for QR code scan. Expires in 50 seconds.");
       console.log("If the QR code isn't scanned in time, the events won't be sent.");
