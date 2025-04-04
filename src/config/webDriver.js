@@ -3,6 +3,9 @@ const { Builder, WebDriver, Browser } = require("selenium-webdriver");
 const { Options } = require("selenium-webdriver/chrome");
 const { isDev } = require("../functions/runtime");
 
+/**
+ * @returns {Options}
+ */
 const getOptions = () => {
   const userDataDir = join(__dirname, "../../chrome-profile");
   const optionsArguments = [`user-data-dir=${userDataDir}`];
