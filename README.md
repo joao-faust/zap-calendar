@@ -9,11 +9,6 @@ will be required. After login, an instance of Google Chrome will be opened in he
 or headless (without interface) mode. With the Chrome instance running, today's events will be fetched
 from Google Calendar and sent to the desired contact on WhatsApp Web.
 
-## Used technologies
-
- - Node.js;
- - Selenium.
-
 ## Running the intregration
 
 Before scheduling the integration with a cron job, you need to run the command below manually to log in
