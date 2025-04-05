@@ -9,6 +9,13 @@ will be required. After login, an instance of Google Chrome will be opened in he
 or headless (without interface) mode. With the Chrome instance running, today's events will be fetched
 from Google Calendar and sent to the desired contact on WhatsApp Web.
 
+## Setting up the env file
+
+Before running the integration, you need to make a copy of the .env.example file and name it .env,
+then set the variable **NODE_ENV** to development or production. In development, a visible Chrome
+instance (headful mode) is opened, useful for debugging. In production, a hidden Chrome instance (headless mode)
+is opened, ideal for servers without a graphical interface.
+
 ## Running the intregration
 
 Before scheduling the integration with a cron job, you need to run the command below manually to log in
