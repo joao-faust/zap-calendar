@@ -1,5 +1,5 @@
-const WhatsAppWeb = require("./classes/WhatsAppWeb");
-const Calendar = require("./classes/Calendar");
+const WhatsAppWeb = require("./services/classes/WhatsAppWeb");
+const Calendar = require("./services/classes/Calendar");
 const { getChromeWebDriver } = require("./config/webDriver");
 const { getCalendarAuth } = require("./config/calendar");
 const { logInRed, logInGreen } = require("./services/terminal");
