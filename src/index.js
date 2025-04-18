@@ -2,9 +2,9 @@ const WhatsAppWeb = require("./classes/WhatsAppWeb");
 const Calendar = require("./classes/Calendar");
 const { getChromeWebDriver } = require("./config/webDriver");
 const { getCalendarAuth } = require("./config/calendar");
-const { logInRed, logInGreen } = require("./functions/terminal");
-const { isDev } = require("./functions/runtime");
-const { wait } = require("./functions/time");
+const { logInRed, logInGreen } = require("./services/terminal");
+const { isDev } = require("./services/runtime");
+const { wait } = require("./services/time");
 
 /**
  * Validates a phone number.

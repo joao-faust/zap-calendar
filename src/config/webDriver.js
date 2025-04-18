@@ -1,7 +1,7 @@
 const { join } = require("path");
 const { Builder, WebDriver, Browser } = require("selenium-webdriver");
 const { Options } = require("selenium-webdriver/chrome");
-const { isDev } = require("../functions/runtime");
+const { isDev } = require("../services/runtime");
 
 /**
  * Configures Chrome options for Selenium WebDriver.
