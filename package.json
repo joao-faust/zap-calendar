@@ -1,0 +1,21 @@
+{
+  "name": "zap-calendar",
+  "version": "1.0.0",
+  "description": "Get today's events from Google Calendar e send them to WhatsApp",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node -r dotenv-safe/config src/index.js"
+  },
+  "author": "João Victor Soares Faust",
+  "license": "MIT",
+  "dependencies": {
+    "@google-cloud/local-auth": "^2.1.0",
+    "dotenv-safe": "^9.1.0",
+    "googleapis": "^105.0.0",
+    "qrcode-terminal": "^0.12.0",
+    "selenium-webdriver": "^4.30.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.5.3"
+  }
+}
